@@ -2,11 +2,11 @@
 plugin: add-to-gallery
 ---
 
-# Export all PowerApps details and its Role assignments from Tenant in CSV format
+# Export all Power Apps details and its Role assignments from Tenant in CSV format
 
 ## Summary
 
-This powershell script will export all the powerapps in a particular tenant and all its environment and its role assignments in csv format.
+This powershell script will export all the Power Apps in a particular tenant and all its environment and its role assignments in csv format.
 
 
 Script will export AppID, AppDisplay Name, User Display name, User Email, Role Type(Owner/CanView/CanEdit), Environment, App Created Time, App Modified Time
@@ -15,21 +15,20 @@ Script will export AppID, AppDisplay Name, User Display name, User Email, Role T
 
 
 ## Implementation
-
 - Open Windows PowerShell ISE
 - Create a new file
 - Save the file and run it
-- Make sure you are PowerApps admin to so that you have access to all the apps
+- Make sure you are Power Apps admin to so that you have access to all the apps
  
 # [Power Apps PowerShell](#tab/powerapps-ps)
 ```powershell
 
 
-#Modules for PowerApps Powershell Commands
+#Modules for Power Apps Powershell Commands
 Install-Module -Name Microsoft.PowerApps.Administration.PowerShell
 Install-Module -Name Microsoft.PowerApps.PowerShell -AllowClobber
 
-#PowerApps Connection
+#Power Apps Connection
 Add-PowerAppsAccount
 
 $currentTime=$(get-date).ToString("yyyyMMddHHmmss");    
@@ -38,7 +37,7 @@ $resultColl=@()
 
 write-host -ForegroundColor Magenta "Getting all the PowerApp Details..."  
    
-# Get all the PowerApps  
+# Get all the Power Apps  
 $apps=Get-AdminPowerApp 
 foreach($app in $apps)  
 {  
